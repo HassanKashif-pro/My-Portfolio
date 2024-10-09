@@ -1,17 +1,40 @@
-body {
-  background: rgb(39, 39, 42) !important;
-  color: #f0f0f0 !important;
-}
+/* styles/Home.css */
 
+/* Light mode */
 body.light {
-  background-color: #f0f0f0 !important;
-  color: #333 !important;
+  background-color: #fff;
+  color: #000;
 }
 
+/* Dark mode */
 body.dark {
-  background: rgb(39, 39, 42) !important;
-  color: #f0f0f0 !important;
+  background: rgb(39, 39, 42);
+  color: #fff;
 }
+
+/* Additional styling for the Ant Layout components in dark mode */
+body.dark .ant-layout-header {
+  background-color: rgb(39, 39, 42);
+}
+
+body.dark .ant-layout-content {
+  background-color: rgb(39, 39, 42);
+}
+
+body.dark .ant-layout-footer {
+  background-color: rgb(39, 39, 42);
+  color: #fff;
+}
+
+/* Custom Switch styling */
+.custom-switch.ant-switch-checked {
+  background-color: #1890ff; /* Primary color in dark mode */
+}
+
+.custom-switch.ant-switch {
+  background-color: #d9d9d9;
+}
+
 .header {
   position: fixed;
   display: flex;
@@ -46,8 +69,8 @@ body.dark {
   min-height: 100vh;
 }
 .custom-switch {
-  width: 60px; /* Width of the switch */
-  height: 30px; /* Height of the switch */
+  width: 55px; /* Width of the switch */
+  height: 25px; /* Height of the switch */
 }
 
 /* Switch Track Styling */
@@ -57,19 +80,17 @@ body.dark {
 }
 /* Customize the handle (unselected state) */
 .custom-switch .ant-switch-handle {
-  width: 28px; /* Width of the handle */
-  height: 28px; /* Height of the handle */
+  width: 22px; /* Width of the handle */
+  height: 22px; /* Height of the handle */
   background-color: #fff; /* White background for the handle */
-  border-radius: 50%; /* Rounded shape */
-  transition: transform 0.2s ease; /* Smooth transition */
+  border-radius: 30%; /* Rounded shape */
 }
 /* Customize the inner track (unselected state) */
 .custom-switch .ant-switch-inner {
   background-color: #d9d9d9; /* Light grey background for light mode */
-  border-radius: 4px; /* Match border radius of the switch */
+  border-radius: 6px; /* Match border radius of the switch */
 }
 /* Adjust position of handle when checked */
 .custom-switch.ant-switch-checked .ant-switch-handle {
-  transition: transform 1s ease; /* Smooth transition */
-  transform: translateX(-10px); /* Move handle to the right */
+  transform: translateX(-4px); /* Move handle to the right */
 }

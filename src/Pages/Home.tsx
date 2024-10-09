@@ -8,45 +8,45 @@ function Home() {
 
   const toggleTheme = (checked) => {
     setTheme(checked ? "dark" : "light");
-    document.body.className = checked ? "dark" : "light"; // Add class to body for styling
+    document.body.className = checked ? "dark" : "light"; // Apply global theme class
   };
+
   return (
-    <Layout style={{ minHeight:"100vh"}}>
-      <Header className="header"         style={{
-          position: 'fixed',
+    <Layout style={{ minHeight: "100vh" }}>
+      <Header
+        className="header"
+        style={{
+          position: "fixed",
           top: 0,
-          width: '100%',
+          width: "100%",
           zIndex: 1, // Ensure it's on top
-          background: '#001529', // Ant Design default header background
-          padding: '0 20px', // Adjust padding for content inside header
-          color: '#fff',
-        }}>
-        <div style={{ color: 'white', float: 'left', marginRight: '20px' }}>
+          padding: "0 20px", // Adjust padding for content inside header
+          color: "#fff",
+        }}
+      >
+        <div style={{ color: "white", float: "left", marginRight: "20px" }}>
           MHK
         </div>
-        <div className="box" style={{ float: 'right' }}>
+        <div className="box" style={{ float: "right" }}>
           <div className={`app ${theme}`}>
             {/* Switch for Theme Toggle */}
-            <Switch 
-              onChange={toggleTheme} 
-              className="custom-switch" 
-              checked={theme === 'dark'} 
+            <Switch
+              onChange={toggleTheme}
+              className="custom-switch"
+              checked={theme === "dark"}
               style={{ zIndex: 2 }} // Ensure the switch is on top
             />
           </div>
         </div>
       </Header>
-        <Content className="Content" >
-        <div style={{ padding: 24}}>
-          RIGHT
-        </div>
-        <div style={{ padding: 24}}>
-          RIGHT
-        </div>
+
+      {/* Add marginTop to avoid overlap with fixed header */}
+      <Content className="Content" style={{ marginTop: "64px", padding: 24 }}>
+        <div style={{ background: "#fff", padding: 24 }}>RIGHT</div>
+        <div style={{ background: "#fff", padding: 24 }}>RIGHT</div>
       </Content>
-      <Footer style={{ textAlign: 'center' }}>
-        @2024 MHK
-      </Footer>
+
+      <Footer style={{ textAlign: "center" }}>@2024 MHK</Footer>
     </Layout>
   );
 }
