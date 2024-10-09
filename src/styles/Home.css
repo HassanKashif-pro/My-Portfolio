@@ -1,0 +1,75 @@
+body {
+  background: rgb(39, 39, 42) !important;
+  color: #f0f0f0 !important;
+}
+
+body.light {
+  background-color: #f0f0f0 !important;
+  color: #333 !important;
+}
+
+body.dark {
+  background: rgb(39, 39, 42) !important;
+  color: #f0f0f0 !important;
+}
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between; /* Makes elements spread across the header */
+  align-items: center; /* Centers the elements vertically */
+  padding: 0 20px; /* Adds space around the items inside the header */
+  background: rgb(
+    39,
+    39,
+    42
+  ); /* Ant Design's default header background color */
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+}
+.switch-wrapper {
+  z-index: 10;
+  position: relative;
+}
+.box {
+  display: flex;
+  align-items: center;
+}
+
+.app {
+  margin-left: 10px; /* Adds a small gap between MHK and the switch */
+}
+.Content {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.custom-switch {
+  width: 60px; /* Width of the switch */
+  height: 30px; /* Height of the switch */
+}
+
+/* Switch Track Styling */
+.custom-switch.ant-switch {
+  border-radius: 6px; /* Rounded corners for the switch */
+  transition: transform 1s ease; /* Smooth transition */
+}
+/* Customize the handle (unselected state) */
+.custom-switch .ant-switch-handle {
+  width: 28px; /* Width of the handle */
+  height: 28px; /* Height of the handle */
+  background-color: #fff; /* White background for the handle */
+  border-radius: 50%; /* Rounded shape */
+  transition: transform 0.2s ease; /* Smooth transition */
+}
+/* Customize the inner track (unselected state) */
+.custom-switch .ant-switch-inner {
+  background-color: #d9d9d9; /* Light grey background for light mode */
+  border-radius: 4px; /* Match border radius of the switch */
+}
+/* Adjust position of handle when checked */
+.custom-switch.ant-switch-checked .ant-switch-handle {
+  transition: transform 1s ease; /* Smooth transition */
+  transform: translateX(-10px); /* Move handle to the right */
+}
