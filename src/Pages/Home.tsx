@@ -41,9 +41,17 @@ function Home() {
       </Header>
 
       {/* Add marginTop to avoid overlap with fixed header */}
-      <Content className="Content" style={{ marginTop: "64px", padding: 24 }}>
-        <div style={{ background: "#fff", padding: 24 }}>RIGHT</div>
-        <div style={{ background: "#fff", padding: 24 }}>RIGHT</div>
+      <Content className="Content" style={{ marginTop: "64px"}}>
+        <Content style={{ paddingLeft:"60px", position:"relative"}}>
+          <Content>
+            <div className="Hello-1">HE</div>
+            <div className="Hello-2">LLO</div>
+            <div className="Hello-dot">.</div>
+          </Content>
+          <Content className="Intro-section" style={{ background: "#f87171" }}>
+            <div className="scroll-down">← Scroll</div>
+          </Content>
+        </Content>
       </Content>
 
       <Footer style={{ textAlign: "center" }}>@2024 MHK</Footer>
