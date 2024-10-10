@@ -2,6 +2,9 @@ import { Content, Footer, Header } from "antd/es/layout/layout";
 import "../styles/Home.css";
 import { Layout, Switch } from "antd";
 import React, { useState } from "react";
+import Link from "antd/es/typography/Link";
+import GithubOutlined from "@ant-design/icons/lib/icons/GithubOutlined";
+import { LinkedinOutlined } from "@ant-design/icons";
 
 function Home() {
   const [theme, setTheme] = useState("light");
@@ -40,7 +43,7 @@ function Home() {
         </div>
       </Header>
 
-      {/* Add marginTop to avoid overlap with fixed header */}
+      {/* THAT RED BOX AT THE LEFT */}
       <Content className="Content" style={{ marginTop: "64px"}}>
         <Content style={{ paddingLeft:"60px", position:"relative"}}>
           <Content>
@@ -51,8 +54,13 @@ function Home() {
           <Content className="Intro-section" style={{ background: "#f87171" }}>
             <div className="scroll-down">← Scroll</div>
           </Content>
+    <Content className="Social-links">
+       <GithubOutlined className="github-social" href="/https://github.com/HassanKashif-pro"/>
+       <LinkedinOutlined className="linkedIn-social" href="/https://github.com/HassanKashif-pro"/>
+    </Content>
         </Content>
       </Content>
+
 
       <Footer style={{ textAlign: "center" }}>@2024 MHK</Footer>
     </Layout>
