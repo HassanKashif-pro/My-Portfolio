@@ -1,5 +1,7 @@
 /* styles/Home.css */
-
+body {
+  font-family: "Montserrat", sans-serif;
+}
 /* Light mode */
 body.light {
   background-color: #fff;
@@ -63,16 +65,72 @@ body.dark .ant-layout-footer {
   margin-left: 10px; /* Adds a small gap between MHK and the switch */
 }
 .Content {
-  display: grid;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+}
+.Intro-section {
+  display: flex-start;
+  height: 85vh;
+  width: 50%;
+}
+:root {
+  --scroll-translate-x: -200px; /* Adjust horizontal position */
+  --scroll-translate-y: 300px; /* Adjust vertical position */
+  --scroll-rotation: -90deg; /* Adjust rotation */
+}
+.scroll-down {
+  letter-spacing: 2px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  transform: rotate(var(--scroll-rotation))
+    translate(var(--scroll-translate-x), var(--scroll-translate-y));
+  transform-origin: center; /* Ensure proper pivot point for rotation */
+}
+.Hello-1 {
+  display: grid;
+  top: 20%;
+  left: 38%;
+  justify-content: center; /* Center the content inside (used with flexbox or grid) */
+  align-items: center;
+  z-index: 10; /* Layering order */
+  position: absolute; /* Position it relative to the nearest positioned ancestor */
+  color: #fff; /* #fff background */
+  font-family: "Montserrat", sans-serif;
+  font-size: 150px;
+  font-weight: 800;
+}
+.Hello-2 {
+  display: grid;
+  top: 10px;
+  left: 38%;
+  justify-content: center; /* Center the content inside (used with flexbox or grid) */
+  align-items: center;
   min-height: 100vh;
+  z-index: 10; /* Layering order */
+  position: absolute; /* Position it relative to the nearest positioned ancestor */
+  color: #fff; /* Transparent background */
+  font-family: "Montserrat", sans-serif;
+  font-size: 150px;
+  font-weight: 800;
+}
+.Hello-dot {
+  display: inline;
+  top: 22%;
+  left: 61%;
+  justify-content: center; /* Center the content inside (used with flexbox or grid) */
+  align-items: center;
+  min-height: 100vh;
+  z-index: 10; /* Layering order */
+  position: absolute; /* Position it relative to the nearest positioned ancestor */
+  color: #f87171; /* Transparent background */
+  font-size: 250px;
 }
 .custom-switch {
   width: 55px; /* Width of the switch */
   height: 25px; /* Height of the switch */
 }
-
 /* Switch Track Styling */
 .custom-switch.ant-switch {
   border-radius: 6px; /* Rounded corners for the switch */
