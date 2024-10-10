@@ -128,8 +128,24 @@ body.dark .ant-layout-footer {
   font-size: 250px;
 }
 .Social-links {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  position: absolute; /* or use fixed if you want it to stay when scrolling */
+  right: 20px; /* Distance from the right edge */
+  top: 40%; /* Distance from the top edge */
+  z-index: 100; /* Ensure it's on top of other elements */
+  cursor: pointer;
+  height: 40px;
+}
+.Social-links .anticon {
+  font-size: 60px; /* Set the icon size */
+  width: 40px; /* Adjust the width to match the size */
+  height: 40px; /* Adjust the height to match the size */
+  margin-top: 20px;
+  transition: 0.4s ease;
+}
+.Social-links .anticon:hover {
+  transition: 0.4s ease;
+  transform: scale(1.2); /* Increase the size by 20% on hover */
 }
 .custom-switch {
   width: 55px; /* Width of the switch */
