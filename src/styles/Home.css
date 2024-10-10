@@ -127,6 +127,10 @@ body.dark .ant-layout-footer {
   color: #f87171; /* Transparent background */
   font-size: 250px;
 }
+.Social-links {
+  display: flex;
+  flex-direction: row;
+}
 .custom-switch {
   width: 55px; /* Width of the switch */
   height: 25px; /* Height of the switch */
@@ -139,14 +143,20 @@ body.dark .ant-layout-footer {
 /* Customize the handle (unselected state) */
 .custom-switch .ant-switch-handle {
   width: 22px; /* Width of the handle */
-  height: 22px; /* Height of the handle */
+  height: 21px; /* Height of the handle */
   background-color: #fff; /* White background for the handle */
   border-radius: 30%; /* Rounded shape */
 }
 /* Customize the inner track (unselected state) */
 .custom-switch .ant-switch-inner {
-  background-color: #d9d9d9; /* Light grey background for light mode */
-  border-radius: 6px; /* Match border radius of the switch */
+  background-color: #d9d9d9;
+  transition: 0.5s ease;
+  border-radius: 6px;
+}
+.custom-switch .ant-switch-inner:hover {
+  transition: 0.5s ease;
+  background-color: #f87171;
+  border-radius: 6px;
 }
 /* Adjust position of handle when checked */
 .custom-switch.ant-switch-checked .ant-switch-handle {
