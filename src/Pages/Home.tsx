@@ -55,8 +55,12 @@ function Home() {
             <div className="scroll-down">← Scroll</div>
           </Content>
     <Content className="Social-links">
-       <GithubOutlined className="github-social" href="/https://github.com/HassanKashif-pro"/>
-       <LinkedinOutlined className="linkedIn-social" href="/https://github.com/HassanKashif-pro"/>
+      <Link href="https://github.com/HassanKashif-pro" className="Social-links">
+       <GithubOutlined className="github-social" />
+       <Link href="/pathwayhereforLinkedIn">
+       <LinkedinOutlined className="linkedIn-social"/>
+       </Link>
+      </Link>
     </Content>
         </Content>
       </Content>
