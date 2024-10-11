@@ -84,6 +84,7 @@ body.light .anticon {
   --scroll-translate-x: -200px; /* Adjust horizontal position */
   --scroll-translate-y: 300px; /* Adjust vertical position */
   --scroll-rotation: -90deg; /* Adjust rotation */
+  --menu-rotation: -90deg; /* Adjust rotation */
 }
 .scroll-down {
   letter-spacing: 2px;
@@ -155,6 +156,32 @@ body.light .anticon {
   transition: 0.4s ease;
   transform: scale(1.2); /* Increase the size by 20% on hover */
 }
+
+.Menu-animated {
+  top: 50%;
+  display: grid;
+  position: absolute;
+  z-index: 100;
+  left: 4%;
+  transform: rotate(var(--menu-rotation));
+  animation: bounce-horizontal 2s infinite; /* Add horizontal bounce animation */
+}
+
+/* Horizontal bounce keyframes */
+@keyframes bounce-horizontal {
+  0%,
+  100% {
+    transform: translateX(
+      0
+    ); /* At the start and end, it's in its original position */
+  }
+  50% {
+    transform: translateX(
+      -15px
+    ); /* Moves left 15px at the peak of the bounce */
+  }
+}
+
 .custom-switch {
   width: 55px; /* Width of the switch */
   height: 25px; /* Height of the switch */

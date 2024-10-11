@@ -45,8 +45,9 @@ function Home() {
 
       {/* THAT RED BOX AT THE LEFT */}
       <Content className="Content" style={{ marginTop: "64px" }}>
+        <Content className="Menu-animated">Menu</Content>
         <Content style={{ paddingLeft: "60px", position: "relative" }}>
-          <Content className="Hello-main">
+          <Content>
             <div className="Hello-1">HE</div>
             <div className="Hello-2">LLO</div>
             <div className="Hello-dot">.</div>
