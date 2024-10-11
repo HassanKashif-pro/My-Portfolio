@@ -44,8 +44,13 @@ function Home() {
       </Header>
 
       {/* THAT RED BOX AT THE LEFT */}
-      <Content className="Content" style={{ marginTop: "64px" }}>
-        <Content className="Menu-animated">Menu</Content>
+      <Content className="Content">
+        <Content
+          className="Menu-animated"
+          style={{ background: "transparent", color: "#fff" }}
+        >
+          MENU
+        </Content>
         <Content style={{ paddingLeft: "60px", position: "relative" }}>
           <Content>
             <div className="Hello-1">HE</div>
