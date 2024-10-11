@@ -27,6 +27,12 @@ body.dark .ant-layout-footer {
   background-color: rgb(39, 39, 42);
   color: #fff;
 }
+body.light .anticon {
+  transition: filter 1s ease;
+  filter: invert(100%);
+  background-color: rgb(39, 39, 42);
+  color: #fff;
+}
 
 /* Custom Switch styling */
 .custom-switch.ant-switch-checked {
@@ -142,6 +148,7 @@ body.dark .ant-layout-footer {
   width: 40px; /* Adjust the width to match the size */
   height: 40px; /* Adjust the height to match the size */
   margin-top: 20px;
+  border-radius: 30px;
   transition: 0.4s ease;
 }
 .Social-links .anticon:hover {

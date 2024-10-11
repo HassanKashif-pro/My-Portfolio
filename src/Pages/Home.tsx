@@ -44,9 +44,9 @@ function Home() {
       </Header>
 
       {/* THAT RED BOX AT THE LEFT */}
-      <Content className="Content" style={{ marginTop: "64px"}}>
-        <Content style={{ paddingLeft:"60px", position:"relative"}}>
-          <Content>
+      <Content className="Content" style={{ marginTop: "64px" }}>
+        <Content style={{ paddingLeft: "60px", position: "relative" }}>
+          <Content className="Hello-main">
             <div className="Hello-1">HE</div>
             <div className="Hello-2">LLO</div>
             <div className="Hello-dot">.</div>
@@ -54,17 +54,19 @@ function Home() {
           <Content className="Intro-section" style={{ background: "#f87171" }}>
             <div className="scroll-down">← Scroll</div>
           </Content>
-    <Content className="Social-links">
-      <Link href="https://github.com/HassanKashif-pro" className="Social-links">
-       <GithubOutlined className="github-social" />
-       <Link href="/pathwayhereforLinkedIn">
-       <LinkedinOutlined className="linkedIn-social"/>
-       </Link>
-      </Link>
-    </Content>
+          <Content className="Social-links">
+            <Link
+              href="https://github.com/HassanKashif-pro"
+              className="Social-links"
+            >
+              <GithubOutlined className="github-social" />
+              <Link href="/pathwayhereforLinkedIn">
+                <LinkedinOutlined className="linkedIn-social" />
+              </Link>
+            </Link>
+          </Content>
         </Content>
       </Content>
-
 
       <Footer style={{ textAlign: "center" }}>@2024 MHK</Footer>
     </Layout>
