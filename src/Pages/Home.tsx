@@ -88,8 +88,8 @@ function Home() {
             </Link>
           </Content>
         </Content>
-        <Content className="Content">ABOUT</Content>
-        <Content className="Content">PROJECT</Content>
+        <Content className="Intro-section">ABOUT</Content>
+        <Content className="Intro-section">PROJECT</Content>
       </Content>
 
       <Footer

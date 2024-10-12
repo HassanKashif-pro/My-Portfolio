@@ -71,12 +71,18 @@ body.light .anticon {
   margin-left: 10px; /* Adds a small gap between MHK and the switch */
 }
 .Content {
+  scroll-snap-type: y mandatory; /* Vertical snapping */
+  overflow-y: scroll;
   align-items: center;
   justify-content: center;
   height: 100vh;
 }
+.Content::-webkit-scrollbar {
+  display: none;
+}
 .Intro-section {
   display: flex-start;
+  scroll-snap-align: center;
   height: 85vh;
   width: 50%;
 }
