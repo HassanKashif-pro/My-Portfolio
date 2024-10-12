@@ -88,9 +88,24 @@ function Home() {
             </Link>
           </Content>
         </Content>
+        <Content style={{ minHeight: "100vh" }}>ABOUT</Content>
       </Content>
 
-      <Footer style={{ textAlign: "center" }}>@2024 MHK</Footer>
+      <Footer
+        style={{
+          textAlign: "center",
+          position: "fixed",
+          bottom: 0, // Ensure it's fixed to the bottom of the page
+          left: 0,
+          width: "100%", // Ensure it spans the entire width of the page
+          height: "20px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        @2024 MHK
+      </Footer>
     </Layout>
   );
 }
