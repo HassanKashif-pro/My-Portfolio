@@ -1,6 +1,6 @@
 import { Content, Footer, Header } from "antd/es/layout/layout";
 import "../styles/Home.css";
-import { Layout, Switch } from "antd";
+import { Button, Image, Layout, Switch } from "antd";
 import React, { useState } from "react";
 import Link from "antd/es/typography/Link";
 import GithubOutlined from "@ant-design/icons/lib/icons/GithubOutlined";
@@ -45,12 +45,28 @@ function Home() {
 
       {/* THAT RED BOX AT THE LEFT */}
       <Content className="Content">
-        <Content
+        <button
           className="Menu-animated"
-          style={{ background: "transparent", color: "#fff" }}
+          style={{
+            background: "transparent",
+            color: "#fff",
+            border: "none",
+          }}
         >
+          <img
+            src="/menu.png"
+            alt="Menu"
+            style={{
+              width: 40,
+              height: 40,
+              position: "relative",
+              bottom: "50px",
+              left: "55px",
+              transform: "rotate(-90deg)",
+            }}
+          />
           MENU
-        </Content>
+        </button>
         <Content style={{ paddingLeft: "60px", position: "relative" }}>
           <Content>
             <div className="Hello-1">HE</div>
