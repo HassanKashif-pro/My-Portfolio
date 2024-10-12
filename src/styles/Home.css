@@ -166,17 +166,33 @@ body.light .anticon {
   left: 4%;
   font-size: x-large;
   transform: rotate(-90deg); /* Rotate the text to align it vertically */
-  animation: horizontalBounce 1s infinite ease-in;
+  animation: verticalBounce 1.5s infinite ease-in-out;
+}
+.Menu-animated::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 50px;
+  left: 45px;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.5s ease-out;
+}
+.Menu-animated:hover::after {
+  transform: scaleX(0.55);
+  transform-origin: bottom left;
 }
 @keyframes verticalBounce {
   0% {
-    transform: translateY(0) rotate(-90deg);
+    transform: translateX(0) rotate(-90deg);
   }
   50% {
-    transform: translateY(-20px) rotate(-90deg);
+    transform: translateX(30px) rotate(-90deg);
   }
   100% {
-    transform: translateY(0) rotate(-90deg);
+    transform: translateX(0) rotate(-90deg);
   }
 }
 
