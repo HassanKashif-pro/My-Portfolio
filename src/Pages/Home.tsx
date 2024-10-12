@@ -22,7 +22,7 @@ function Home() {
           position: "fixed",
           top: 0,
           width: "100%",
-          zIndex: 1, // Ensure it's on top
+          zIndex: 1000, // Ensure it's on top
           padding: "0 20px", // Adjust padding for content inside header
           color: "#fff",
         }}
@@ -88,7 +88,8 @@ function Home() {
             </Link>
           </Content>
         </Content>
-        <Content style={{ minHeight: "100vh" }}>ABOUT</Content>
+        <Content className="Content">ABOUT</Content>
+        <Content className="Content">PROJECT</Content>
       </Content>
 
       <Footer
