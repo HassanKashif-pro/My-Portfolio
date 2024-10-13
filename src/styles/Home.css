@@ -80,12 +80,35 @@ body.light .anticon {
 .Content::-webkit-scrollbar {
   display: none;
 }
-.section {
-  display: flex-start;
-  scroll-snap-align: center;
-  height: 93vh;
-  padding-bottom: 20px;
+.Intro-section {
+  height: 100vh; /* Full screen height for each section */
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 50px;
   width: 50%;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+}
+.About-section {
+  height: 100vh; /* Full screen height for each section */
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+}
+.Project-section {
+  height: 100vh; /* Full screen height for each section */
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
 }
 :root {
   --scroll-translate-x: -200px; /* Adjust horizontal position */
@@ -104,7 +127,7 @@ body.light .anticon {
 }
 .Hello-1 {
   display: grid;
-  top: 19%;
+  top: 20%;
   left: 38%;
   justify-content: center; /* Center the content inside (used with flexbox or grid) */
   align-items: center;
@@ -117,7 +140,7 @@ body.light .anticon {
 }
 .Hello-2 {
   display: grid;
-  top: 15px;
+  top: 30px;
   left: 38%;
   justify-content: center; /* Center the content inside (used with flexbox or grid) */
   align-items: center;
