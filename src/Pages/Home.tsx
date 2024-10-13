@@ -67,13 +67,18 @@ function Home() {
           />
           MENU
         </button>
-        <Content style={{ paddingLeft: "60px", position: "relative" }}>
+        <Content
+          style={{
+            paddingLeft: "60px",
+            position: "relative",
+          }}
+        >
           <Content>
             <div className="Hello-1">HE</div>
             <div className="Hello-2">LLO</div>
             <div className="Hello-dot">.</div>
           </Content>
-          <Content className="Intro-section" style={{ background: "#f87171" }}>
+          <Content className="section" style={{ background: "#f87171" }}>
             <div className="scroll-down">← Scroll</div>
           </Content>
           <Content className="Social-links">
@@ -88,8 +93,8 @@ function Home() {
             </Link>
           </Content>
         </Content>
-        <Content className="Intro-section">ABOUT</Content>
-        <Content className="Intro-section">PROJECT</Content>
+        <Content className="section">ABOUT</Content>
+        <Content className="section">PROJECT</Content>
       </Content>
 
       <Footer

@@ -80,10 +80,11 @@ body.light .anticon {
 .Content::-webkit-scrollbar {
   display: none;
 }
-.Intro-section {
+.section {
   display: flex-start;
   scroll-snap-align: center;
-  height: 85vh;
+  height: 93vh;
+  padding-bottom: 20px;
   width: 50%;
 }
 :root {
@@ -103,7 +104,7 @@ body.light .anticon {
 }
 .Hello-1 {
   display: grid;
-  top: 20%;
+  top: 19%;
   left: 38%;
   justify-content: center; /* Center the content inside (used with flexbox or grid) */
   align-items: center;
@@ -116,7 +117,7 @@ body.light .anticon {
 }
 .Hello-2 {
   display: grid;
-  top: 10px;
+  top: 15px;
   left: 38%;
   justify-content: center; /* Center the content inside (used with flexbox or grid) */
   align-items: center;
@@ -167,7 +168,7 @@ body.light .anticon {
   font-weight: 700;
   top: 50%;
   display: inline-block;
-  position: relative; /* or use fixed if you want it to stay when scrolling */
+  position: fixed; /* or use fixed if you want it to stay when scrolling */
   z-index: 100; /* Ensure it's on top of other elements */
   left: 4%;
   font-size: x-large;
