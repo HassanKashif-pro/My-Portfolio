@@ -81,7 +81,7 @@ body.light .anticon {
   display: none;
 }
 .Intro-section {
-  height: 100vh; /* Full screen height for each section */
+  height: 93vh; /* Full screen height for each section */
   display: flex;
   padding-top: 60px;
   padding-bottom: 50px;
@@ -91,24 +91,51 @@ body.light .anticon {
   scroll-snap-align: center;
 }
 .About-section {
-  height: 100vh; /* Full screen height for each section */
+  height: 85vh; /* Full screen height for each section */
   display: flex;
-  padding-top: 60px;
-  padding-bottom: 50px;
   width: 30%;
   justify-content: center;
   align-items: center;
   scroll-snap-align: center;
 }
 .Project-section {
-  height: 100vh; /* Full screen height for each section */
+  position: absolute;
+  height: 85vh; /* Full screen height for each section */
   display: flex;
-  padding-top: 60px;
-  padding-bottom: 50px;
-  width: 50%;
-  justify-content: center;
+  width: 20%; /* Adjust the width if necessary */
+  right: 0;
+  justify-content: flex-start; /* Aligns items to the left */
   align-items: center;
   scroll-snap-align: center;
+  background-color: #0ea5e9; /* Blue background */
+}
+
+.Project-dot {
+  position: absolute;
+  bottom: 50px; /* Adjust for spacing at the bottom */
+  left: 20px; /* Align to the left */
+  font-size: 100px; /* Size of the dot */
+  color: #0ea5e9; /* Same blue color as the background */
+}
+
+.Project-1,
+.Project-2 {
+  display: flex;
+  align-items: center;
+  position: absolute; /* To allow fine control over placement */
+  font-family: "Montserrat", sans-serif;
+  transform: rotate(90deg); /* Rotate the text */
+  font-size: 100px;
+  font-weight: 800;
+  color: white; /* White text */
+}
+.Project-1 {
+  right: 6rem;
+  bottom: 21rem;
+}
+.Project-2 {
+  bottom: 17rem;
+  right: 8rem;
 }
 :root {
   --scroll-translate-x: -200px; /* Adjust horizontal position */
@@ -126,7 +153,7 @@ body.light .anticon {
   transform-origin: center; /* Ensure proper pivot point for rotation */
 }
 .Hello-1 {
-  display: grid;
+  display: flex;
   top: 20%;
   left: 38%;
   justify-content: center; /* Center the content inside (used with flexbox or grid) */
@@ -139,7 +166,7 @@ body.light .anticon {
   font-weight: 800;
 }
 .Hello-2 {
-  display: grid;
+  display: flex;
   top: 30px;
   left: 38%;
   justify-content: center; /* Center the content inside (used with flexbox or grid) */
