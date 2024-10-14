@@ -9,7 +9,6 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" Component={Home} />
-          <Route path="/about" Component={About} />
         </Routes>
       </Router>
     </>
