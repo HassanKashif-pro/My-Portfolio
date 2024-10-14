@@ -1,0 +1,39 @@
+.Project-section {
+  position: absolute;
+  height: 85vh; /* Full screen height for each section */
+  display: flex;
+  width: 20%; /* Adjust the width if necessary */
+  right: 0;
+  justify-content: flex-start; /* Aligns items to the left */
+  align-items: center;
+  scroll-snap-align: center;
+  background-color: #0ea5e9; /* Blue background */
+}
+
+.Project-dot {
+  position: absolute;
+  bottom: 20%; /* Adjust for spacing at the bottom */
+  right: 20rem; /* Align to the left */
+  font-size: 150px; /* Size of the dot */
+  color: #0ea5e9; /* Same blue color as the background */
+}
+
+.Project-1,
+.Project-2 {
+  display: flex;
+  align-items: center;
+  position: absolute; /* To allow fine control over placement */
+  font-family: "Montserrat", sans-serif;
+  transform: rotate(90deg); /* Rotate the text */
+  font-size: 100px;
+  font-weight: 800;
+  color: white; /* White text */
+}
+.Project-1 {
+  right: 6rem;
+  bottom: 21rem;
+}
+.Project-2 {
+  bottom: 17rem;
+  right: 8rem;
+}
