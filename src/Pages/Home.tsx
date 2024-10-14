@@ -1,5 +1,7 @@
 import { Content, Footer, Header } from "antd/es/layout/layout";
-import "../styles/Home.css";
+import "../styles/Intro.css";
+import "../styles/About.css";
+import "../styles/Projects.css";
 import { Button, Image, Layout, Switch } from "antd";
 import React, { useState } from "react";
 import Link from "antd/es/typography/Link";
@@ -13,6 +15,8 @@ function Home() {
     setTheme(checked ? "dark" : "light");
     document.body.className = checked ? "dark" : "light"; // Apply global theme class
   };
+
+  const menuOpen = () => {};
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
@@ -47,6 +51,7 @@ function Home() {
       <Content className="Content">
         <button
           className="Menu-animated"
+          onClick={menuOpen}
           style={{
             background: "transparent",
             color: "#fff",
@@ -142,6 +147,16 @@ function Home() {
                   .
                 </div>
               </Content>
+              <div
+                style={{
+                  position: "relative",
+                  right: "12rem",
+                  top: "12rem",
+                  transform: "rotate(180deg)",
+                }}
+              >
+                <img src="/arrow.png" />
+              </div>
             </Content>
           </Content>
         </Content>
