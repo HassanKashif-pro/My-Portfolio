@@ -79,7 +79,7 @@ function Home() {
             <div className="Hello-dot">.</div>
           </Content>
           <Content className="Intro-section" style={{ background: "#f87171" }}>
-            <div style={{ top: "45%", position: "relative", left: "45%" }}>
+            <div style={{ top: "50%", position: "relative", left: "45%" }}>
               <img src="/arrow.png" />
             </div>
           </Content>
@@ -122,7 +122,29 @@ function Home() {
             </div>
           </Content>
         </Content>
-        <Content className="Project-section">PROJECT</Content>
+        {/* THIS IS THE PROJECT SECTION */}
+        <Content style={{ paddingRight: "60px" }}>
+          <Content
+            style={{
+              paddingTop: "90px",
+              paddingRight: "60px",
+              position: "relative",
+            }}
+          >
+            <Content
+              className="Project-section"
+              style={{ background: "#0EA5E9" }}
+            >
+              <Content style={{ backgroundColor: "" }}>
+                <div className="Project-1">PRO</div>
+                <div className="Project-2">JECTS</div>
+                <div className="Project-dot" style={{ color: "#0EA5E9" }}>
+                  .
+                </div>
+              </Content>
+            </Content>
+          </Content>
+        </Content>
       </Content>
 
       <Footer
