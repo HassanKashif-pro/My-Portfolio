@@ -1,7 +1,89 @@
+import { Content } from "antd/es/layout/layout";
 import React from "react";
 
 function About() {
-  return <div></div>;
+  const moreOpen = () => {};
+  return (
+    <Content
+      style={{
+        paddingTop: "90px",
+        paddingLeft: "60px",
+        position: "relative",
+      }}
+    >
+      <Content className="About-section" style={{ background: "#FACC15" }}>
+        <Content style={{}}>
+          <div className="Hello-1" style={{ top: "35%", left: "20%" }}>
+            AB
+          </div>
+          <div className="Hello-2" style={{ top: "24%", left: "19%" }}>
+            OUT
+          </div>
+          <div
+            className="Hello-dot"
+            style={{ color: "#FACC15", top: "40%", left: "43%" }}
+          >
+            .
+          </div>
+        </Content>
+        <div style={{ top: "45%", position: "relative" }}>
+          <img src="/arrow.png" />
+        </div>
+      </Content>
+      <Content className="about-info" style={{ background: "transparent" }}>
+        {" "}
+        <p
+          style={{
+            fontSize: "30px",
+            fontWeight: "700",
+            marginBottom: "10px", // Adds spacing between the elements
+          }}
+        >
+          HI<span style={{ color: "#FACC15" }}>,</span> I AM
+        </p>
+        <div
+          style={{
+            fontSize: "30px",
+            fontWeight: "700",
+            marginBottom: "10px", // Adds spacing between the elements
+          }}
+        >
+          Muhammad Hassan Kashif
+        </div>
+        <div
+          style={{
+            fontSize: "20px",
+            fontWeight: "500",
+          }}
+        >
+          Frontend | Responsive | Interactive Design
+        </div>
+      </Content>
+      <button
+        className="More-animated"
+        onClick={moreOpen}
+        style={{
+          background: "transparent",
+          color: "#fff",
+          border: "none",
+        }}
+      >
+        <img
+          src="/triangle.png"
+          alt="Menu"
+          style={{
+            width: 40,
+            height: 40,
+            position: "relative",
+            top: "50px",
+            left: "55px",
+            transform: "rotate(360deg)",
+          }}
+        />
+        MORE
+      </button>
+    </Content>
+  );
 }
 
 export default About;
