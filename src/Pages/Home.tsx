@@ -7,6 +7,8 @@ import React, { useState } from "react";
 import Link from "antd/es/typography/Link";
 import GithubOutlined from "@ant-design/icons/lib/icons/GithubOutlined";
 import { LinkedinOutlined } from "@ant-design/icons";
+import About from "./About.tsx";
+import Project from "./Project.tsx";
 
 function Home() {
   const [theme, setTheme] = useState("light");
@@ -46,8 +48,6 @@ function Home() {
           </div>
         </div>
       </Header>
-
-      {/* THAT RED BOX AT THE LEFT */}
       <Content className="Content">
         <button
           className="Menu-animated"
@@ -100,68 +100,11 @@ function Home() {
             </Link>
           </Content>
         </Content>
-        <Content
-          style={{
-            paddingTop: "90px",
-            paddingLeft: "60px",
-            position: "relative",
-          }}
-        >
-          <Content className="About-section" style={{ background: "#FACC15" }}>
-            <Content style={{}}>
-              <div className="Hello-1" style={{ top: "35%", left: "20%" }}>
-                AB
-              </div>
-              <div className="Hello-2" style={{ top: "24%", left: "19%" }}>
-                OUT
-              </div>
-              <div
-                className="Hello-dot"
-                style={{ color: "#FACC15", top: "40%", left: "43%" }}
-              >
-                .
-              </div>
-            </Content>
-            <div style={{ top: "45%", position: "relative" }}>
-              <img src="/arrow.png" />
-            </div>
-          </Content>
-        </Content>
+        {/* THIS IS THE ABOUT SECTION */}
+        <About />
         {/* THIS IS THE PROJECT SECTION */}
-        <Content style={{ paddingRight: "60px" }}>
-          <Content
-            style={{
-              paddingTop: "90px",
-              paddingRight: "60px",
-              position: "relative",
-            }}
-          >
-            <Content
-              className="Project-section"
-              style={{ background: "#0EA5E9" }}
-            >
-              <Content style={{ backgroundColor: "" }}>
-                <div className="Project-1">PRO</div>
-                <div className="Project-2">JECTS</div>
-                <div className="Project-dot" style={{ color: "#0EA5E9" }}>
-                  .
-                </div>
-              </Content>
-              <div
-                style={{
-                  position: "relative",
-                  right: "12rem",
-                  top: "12rem",
-                  transform: "rotate(180deg)",
-                }}
-              >
-                <img src="/arrow.png" />
-              </div>
-            </Content>
-          </Content>
-        </Content>
+        <Project />
       </Content>
-
       <Footer
         style={{
           textAlign: "center",
