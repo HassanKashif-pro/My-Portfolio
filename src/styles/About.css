@@ -52,22 +52,12 @@
   top: 50%; /* Vertical position */
   right: 5%; /* Horizontal position */
   display: inline-block;
-<<<<<<< HEAD
   position: fixed; /* Fixed to the viewport */
   z-index: 100; /* Ensure it stays above other elements */
-=======
-  position: fixed; /* or use fixed if you want it to stay when scrolling */
-  z-index: 100; /* Ensure it's on top of other elements */
-  right: 5%;
->>>>>>> cb1ff6d45d3211c3a46fc0b64617bc96681fffa8
   font-size: x-large;
   transform: rotate(-90deg); /* Rotates the text */
   animation: verticalBounce 1.5s infinite ease-in-out; /* Bouncing animation */
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> cb1ff6d45d3211c3a46fc0b64617bc96681fffa8
 .More-animated::after {
   content: "";
   position: absolute;
@@ -81,16 +71,13 @@
   transition: transform 0.5s ease-out;
 }
 .More-animated:hover::after {
-<<<<<<< HEAD
   transform: scaleX(0.76);
-=======
-  transform: scaleX(0.55);
->>>>>>> cb1ff6d45d3211c3a46fc0b64617bc96681fffa8
   transform-origin: bottom left;
 }
 .about-info {
-  display: flex;
-  right: 45%;
+  display: grid;
+  left: 45%;
+  top: 40%;
   color: #fff;
   position: absolute;
   justify-content: center;

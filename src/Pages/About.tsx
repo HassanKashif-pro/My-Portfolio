@@ -36,14 +36,13 @@ function About() {
           style={{
             fontSize: "30px",
             fontWeight: "700",
-            marginBottom: "10px", // Adds spacing between the elements
           }}
         >
           HI<span style={{ color: "#FACC15" }}>,</span> I AM
         </p>
         <div
           style={{
-            fontSize: "30px",
+            fontSize: "50px",
             fontWeight: "700",
             marginBottom: "10px", // Adds spacing between the elements
           }}
@@ -54,9 +53,22 @@ function About() {
           style={{
             fontSize: "20px",
             fontWeight: "500",
+            letterSpacing: "3px",
           }}
         >
-          Frontend | Responsive | Interactive Design
+          Frontend <span style={{ color: "#FACC15" }}>|</span> Responsive{" "}
+          <span style={{ color: "#FACC15" }}>|</span> Interactive Design
+        </div>
+        <div
+          style={{
+            fontSize: "20px",
+            fontWeight: "500",
+            letterSpacing: "3px",
+            marginTop: "20px",
+          }}
+        >
+          HTML <span style={{ color: "#FACC15" }}>|</span> CSS{" "}
+          <span style={{ color: "#FACC15" }}>|</span> JAVA SCRIPT
         </div>
       </Content>
       <button>
