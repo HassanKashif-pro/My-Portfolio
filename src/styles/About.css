@@ -46,30 +46,41 @@
   color: #f87171; /* Transparent background */
   font-size: 250px;
 }
-.Menu-animated {
+/* THIS IS THE MORE TAB  */
+.More-animated {
   font-weight: 700;
-  top: 50%;
+  top: 50%; /* Vertical position */
+  right: 5%; /* Horizontal position */
   display: inline-block;
-  position: fixed; /* or use fixed if you want it to stay when scrolling */
-  z-index: 100; /* Ensure it's on top of other elements */
-  left: 4%;
+  position: fixed; /* Fixed to the viewport */
+  z-index: 100; /* Ensure it stays above other elements */
   font-size: x-large;
-  transform: rotate(-90deg); /* Rotate the text to align it vertically */
-  animation: verticalBounce 1.5s infinite ease-in-out;
+  transform: rotate(-90deg); /* Rotates the text */
+  animation: verticalBounce 1.5s infinite ease-in-out; /* Bouncing animation */
 }
-.Menu-animated::after {
+
+.More-animated::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 3px;
-  top: 50px;
-  left: 45px;
+  top: 27px;
+  left: 10px;
   background-color: #ffffff;
   transform: scaleX(0);
   transform-origin: bottom left;
   transition: transform 0.5s ease-out;
 }
-.Menu-animated:hover::after {
-  transform: scaleX(0.55);
+.More-animated:hover::after {
+  transform: scaleX(0.76);
   transform-origin: bottom left;
+}
+.about-info {
+  display: flex;
+  right: 45%;
+  color: #fff;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 15rem;
 }

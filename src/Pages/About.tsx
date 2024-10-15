@@ -59,28 +59,31 @@ function About() {
           Frontend | Responsive | Interactive Design
         </div>
       </Content>
-      <button
-        className="More-animated"
-        onClick={moreOpen}
-        style={{
-          background: "transparent",
-          color: "#fff",
-          border: "none",
-        }}
-      >
-        <img
-          src="/triangle.png"
-          alt="Menu"
+      <button>
+        <button
+          className="More-animated"
+          onClick={moreOpen}
           style={{
-            width: 40,
-            height: 40,
-            position: "relative",
-            top: "50px",
-            left: "55px",
-            transform: "rotate(360deg)",
+            background: "transparent",
+            color: "#fff",
+            border: "none",
+            position: "absolute",
           }}
-        />
-        MORE
+        >
+          <img
+            src="/triangle.png"
+            alt="Menu"
+            style={{
+              width: 40,
+              height: 40,
+              position: "absolute",
+              top: "34px",
+              left: "25px",
+              transform: "rotate(360deg)",
+            }}
+          />
+          MORE
+        </button>
       </button>
     </Content>
   );
