@@ -1,10 +1,15 @@
+.main-section {
+}
+
 .About-section {
   height: 85vh; /* Full screen height for each section */
   display: flex;
   width: 30%;
   justify-content: center;
   align-items: center;
-  scroll-snap-align: center;
+  overflow-x: auto; /* Horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snap sections horizontally */
+  scroll-snap-align: start;
 }
 
 .Hello-1 {
@@ -83,4 +88,6 @@
   justify-content: center;
   align-items: center;
   top: 15rem;
+}
+.More-section {
 }

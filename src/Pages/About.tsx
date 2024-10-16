@@ -5,6 +5,7 @@ function About() {
   const moreOpen = () => {};
   return (
     <Content
+      className="main-section"
       style={{
         paddingTop: "90px",
         paddingLeft: "60px",
