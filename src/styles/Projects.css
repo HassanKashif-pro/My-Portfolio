@@ -7,9 +7,19 @@
   justify-content: flex-start; /* Aligns items to the left */
   align-items: center;
   scroll-snap-align: center;
-  background-color: #0ea5e9; /* Blue background */
 }
-
+.Content-project {
+  scroll-snap-type: y mandatory; /* Vertical snapping */
+  overflow-y: scroll;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+.Content-project::-webkit-scrollbar {
+  display: none;
+}
 .Project-dot {
   position: absolute;
   bottom: 20%; /* Adjust for spacing at the bottom */
@@ -36,4 +46,14 @@
 .Project-2 {
   bottom: 17rem;
   right: 8rem;
+}
+.carouselBox {
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 60%;
+  border-radius: 10px;
+  border-color: #0ea5e9;
+  top: 35rem;
+  left: 20rem;
 }
