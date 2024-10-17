@@ -116,6 +116,7 @@ function Home() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          zIndex: "1000",
         }}
       >
         @2024 MHK
