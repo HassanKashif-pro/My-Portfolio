@@ -69,11 +69,9 @@ body.light .anticon {
 .Content {
   scroll-snap-type: y mandatory; /* Vertical snapping */
   overflow-y: scroll;
-  scroll-snap-type: x mandatory; /* Vertical snapping */
-  overflow-x: scroll;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: auto;
   scroll-behavior: smooth;
 }
 .Content::-webkit-scrollbar {
