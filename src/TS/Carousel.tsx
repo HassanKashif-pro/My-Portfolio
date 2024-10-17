@@ -1,40 +1,50 @@
 import React from "react";
 import { Carousel } from "antd";
+import { Content } from "antd/es/layout/layout";
 
 const contentStyle: React.CSSProperties = {
   margin: 0,
-  height: "260px",
+  height: "360px",
   color: "#fff",
-  lineHeight: "260px",
+  lineHeight: "360px",
+  borderRadius: "100px",
   textAlign: "center",
-  background: "#364d79",
+  position: "relative", // To position overlays on top of the images
 };
 
-const dotPosition = "bottom";
-
 const App: React.FC = () => (
-  <div>
-    <Carousel
-      arrows
-      infinite={false}
-      dotPosition={dotPosition}
-      className="carouselBox"
-    >
-      <div>
-        <h3 style={contentStyle}>1</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>2</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>3</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>4</h3>
-      </div>
-    </Carousel>
-    <br />
-  </div>
+  <Content style={{ borderColor: "-moz-initial" }}>
+    <div>
+      <Carousel
+        arrows
+        autoplay
+        infinite={true}
+        dotPosition="bottom"
+        className="carouselBox"
+      >
+        {["01", "02", "03"].map((number, index) => (
+          <div key={index}>
+            <div style={contentStyle}>
+              <img
+                src={`/banking.jpg`}
+                style={{
+                  height: "100%",
+                  width: "100%",
+                  opacity: "0.2",
+                }}
+                alt={`Slide ${index + 1}`}
+              />
+              <div className="overlay">
+                <div className="number-badge">{number}</div>
+                <div className="carousel-title">Project No. {index + 1}</div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </Carousel>
+      <br />
+    </div>
+  </Content>
 );
 
 export default App;

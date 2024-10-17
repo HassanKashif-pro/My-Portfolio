@@ -50,10 +50,61 @@
 .carouselBox {
   justify-content: center;
   align-items: center;
-  width: 60%;
-  height: 60%;
-  border-radius: 10px;
+  width: 67%;
+  height: 70%;
   border-color: #0ea5e9;
-  top: 35rem;
-  left: 20rem;
+  top: 37rem;
+  left: 15rem;
+  border: 3px solid #00aaff; /* Blue border color */
+  border-radius: 10px; /* Optional rounded corners */
+  padding: 20px; /* Padding inside the border */
+  box-shadow: 0 0 10px #00aaff94; /* Optional blue shadow effect for glow */
+}
+.carouselBox .slick-prev,
+.carouselBox .slick-next {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  color: black;
+  z-index: 10;
+}
+.carouselBox .slick-prev:hover,
+.carouselBox .slick-next:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transform: translateY(-50%);
+  z-index: 20;
+}
+
+.number-badge {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.301);
+  position: absolute;
+  bottom: 40%;
+  left: 20px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.carousel-title {
+  color: rgba(255, 255, 255, 0.404);
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.carouselBox img:hover {
+  opacity: 1 !important;
+}
+
+.carouselBox img {
+  transition: opacity 0.2s ease;
 }
