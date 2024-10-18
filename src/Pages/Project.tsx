@@ -6,12 +6,7 @@ function Project() {
   return (
     <Content>
       <Content className="Content-project">
-        <Content
-          className="carouselBox"
-          style={{ padding: 0, paddingLeft: "0" }}
-        >
-          <App />
-        </Content>
+        <App />
         <Content style={{ paddingRight: "60px", paddingLeft: "60px" }}>
           <Content
             style={{
