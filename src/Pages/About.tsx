@@ -27,7 +27,7 @@ function About() {
             .
           </div>
         </Content>
-        <div style={{ top: "45%", position: "relative" }}>
+        <div style={{ top: "88%", left: "85%", position: "relative" }}>
           <img src="/arrow.png" />
         </div>
       </Content>
@@ -72,32 +72,32 @@ function About() {
           <span style={{ color: "#FACC15" }}>|</span> JAVA SCRIPT
         </div>
       </Content>
-      <button>
-        <button
-          className="More-animated"
-          onClick={moreOpen}
+
+      <button
+        className="More-animated"
+        onClick={moreOpen}
+        style={{
+          background: "transparent",
+          color: "#fff",
+          border: "none",
+          position: "absolute",
+        }}
+      >
+        <img
+          src="/triangle.png"
+          alt="Menu"
           style={{
-            background: "transparent",
-            color: "#fff",
-            border: "none",
+            width: 40,
+            height: 40,
             position: "absolute",
+            top: "34px",
+            left: "25px",
+            transform: "rotate(360deg)",
           }}
-        >
-          <img
-            src="/triangle.png"
-            alt="Menu"
-            style={{
-              width: 40,
-              height: 40,
-              position: "absolute",
-              top: "34px",
-              left: "25px",
-              transform: "rotate(360deg)",
-            }}
-          />
-          MORE
-        </button>
+        />
+        MORE
       </button>
+      <Content></Content>
     </Content>
   );
 }

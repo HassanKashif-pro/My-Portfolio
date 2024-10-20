@@ -9,8 +9,6 @@
   scroll-snap-align: center;
 }
 .Content-project {
-  scroll-snap-type: y mandatory; /* Vertical snapping */
-  overflow-y: scroll;
   overflow: hidden;
   align-items: center;
   justify-content: center;
@@ -40,12 +38,12 @@
   color: white; /* White text */
 }
 .Project-1 {
-  right: 6rem;
+  right: 5rem;
   bottom: 21rem;
 }
 .Project-2 {
   bottom: 17rem;
-  right: 8rem;
+  right: 7rem;
 }
 .carouselBox {
   justify-content: center;

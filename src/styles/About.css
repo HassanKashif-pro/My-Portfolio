@@ -1,14 +1,17 @@
 .main-section {
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-align: start;
 }
-
 .About-section {
-  height: 85vh; /* Full screen height for each section */
-  display: flex;
+  height: 85vh;
+  display: inline-block;
   width: 30%;
   justify-content: center;
   align-items: center;
-  overflow-x: auto; /* Horizontal scrolling */
-  scroll-snap-type: x mandatory; /* Snap sections horizontally */
   scroll-snap-align: start;
 }
 
@@ -16,11 +19,11 @@
   display: flex;
   top: 20%;
   left: 38%;
-  justify-content: center; /* Center the content inside (used with flexbox or grid) */
+  justify-content: center;
   align-items: center;
-  z-index: 10; /* Layering order */
-  position: absolute; /* Position it relative to the nearest positioned ancestor */
-  color: #fff; /* #fff background */
+  z-index: 10;
+  position: absolute;
+  color: #fff;
   font-family: "Montserrat", sans-serif;
   font-size: 150px;
   font-weight: 800;
@@ -29,12 +32,12 @@
   display: flex;
   top: 30px;
   left: 38%;
-  justify-content: center; /* Center the content inside (used with flexbox or grid) */
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
-  z-index: 10; /* Layering order */
-  position: absolute; /* Position it relative to the nearest positioned ancestor */
-  color: #fff; /* Transparent background */
+  z-index: 10;
+  position: absolute;
+  color: #fff;
   font-family: "Montserrat", sans-serif;
   font-size: 150px;
   font-weight: 800;
@@ -43,25 +46,25 @@
   display: inline;
   top: 22%;
   left: 61%;
-  justify-content: center; /* Center the content inside (used with flexbox or grid) */
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
-  z-index: 10; /* Layering order */
-  position: absolute; /* Position it relative to the nearest positioned ancestor */
-  color: #f87171; /* Transparent background */
+  z-index: 10;
+  position: absolute;
+  color: #f87171;
   font-size: 250px;
 }
-/* THIS IS THE MORE TAB  */
+
 .More-animated {
   font-weight: 700;
-  top: 50%; /* Vertical position */
-  right: 5%; /* Horizontal position */
+  top: 50%;
+  right: 5%;
   display: inline-block;
-  position: fixed; /* Fixed to the viewport */
-  z-index: 100; /* Ensure it stays above other elements */
+  position: fixed;
+  z-index: 100;
   font-size: x-large;
-  transform: rotate(-90deg); /* Rotates the text */
-  animation: verticalBounce 1.5s infinite ease-in-out; /* Bouncing animation */
+  transform: rotate(-90deg);
+  animation: verticalBounce 1.5s infinite ease-in-out;
 }
 .More-animated::after {
   content: "";
