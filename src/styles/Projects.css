@@ -142,3 +142,16 @@
   transform: translateX(-50%); /* Center the section horizontally */
   gap: 10px; /* Add space between the badges */
 }
+.project-end {
+  position: absolute;
+  display: inline;
+  width: 20%;
+  padding-top: 10rem;
+  align-items: center;
+  justify-content: center;
+  left: 35%;
+  color: aliceblue;
+  font-size: 20px;
+  font-weight: 500;
+  z-index: 1000;
+}
