@@ -9,6 +9,8 @@
   scroll-snap-align: center;
 }
 .Content-project {
+  scroll-snap-type: y mandatory; /* Vertical snapping */
+  overflow-y: scroll;
   overflow: hidden;
   align-items: center;
   justify-content: center;
@@ -109,6 +111,7 @@
 
 .number-badge {
   font-size: 5rem;
+  opacity: 1;
   color: rgba(255, 255, 255, 0.897);
   position: absolute;
   bottom: 35%;
@@ -128,5 +131,14 @@
 }
 
 .carouselBox img {
-  transition: opacity 0.2s ease;
+  transition: opacity 0.4s ease;
+}
+.card-Type {
+  position: absolute;
+  display: flex; /* Flexbox to align items in a row */
+  opacity: 2;
+  bottom: 7rem;
+  left: 50%;
+  transform: translateX(-50%); /* Center the section horizontally */
+  gap: 10px; /* Add space between the badges */
 }
