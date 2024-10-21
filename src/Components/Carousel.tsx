@@ -1,6 +1,7 @@
 import React from "react";
 import { Carousel } from "antd";
 import { Content } from "antd/es/layout/layout";
+import GithubOutlined from "@ant-design/icons/lib/icons/GithubOutlined";
 
 const contentStyle: React.CSSProperties = {
   margin: 0,
@@ -57,34 +58,6 @@ const App: React.FC = () => {
                   }}
                   alt={`Slide ${index + 1}`}
                 />
-                <a
-                  href="https://github.com/HassanKashif-pro"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button style={{ position: "absolute", cursor: "pointer" }}>
-                    <div
-                      style={{
-                        bottom: "70%",
-                        color: "#fff",
-                        position: "absolute",
-                        display: "inline-flex", // Align items in a row
-                        alignItems: "center", // Vertically center the text and image
-                        fontSize: "20px",
-                        fontWeight: "600",
-                        opacity: "0.4",
-                        zIndex: "1000",
-                      }}
-                    >
-                      Repo
-                      <img
-                        src="/open.png"
-                        style={{ marginLeft: "8px" }}
-                        alt="Open Icon"
-                      />
-                    </div>
-                  </button>
-                </a>
                 <div className="overlay">
                   <div className="number-badge">{`0${index + 1}`}</div>
                   <div className="carousel-title">{projects[index]}</div>
@@ -94,6 +67,21 @@ const App: React.FC = () => {
             </div>
           ))}
         </Carousel>
+        <div className="project-end">
+          More on&nbsp;
+          <a
+            href="https://github.com/HassanKashif-pro"
+            style={{
+              textDecoration: "none",
+              color: "white",
+              textDecorationLine: "underline",
+            }}
+          >
+            GitHub
+          </a>
+          &nbsp;
+          <GithubOutlined />
+        </div>
         <br />
       </div>
     </Content>
