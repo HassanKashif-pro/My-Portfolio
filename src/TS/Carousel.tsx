@@ -15,6 +15,24 @@ const contentStyle: React.CSSProperties = {
 const App: React.FC = () => {
   const images = ["/banking.jpg", "/todo.jpg", "/AiChatbot.jpg"];
   const projects = ["Banking App", "Todo App", "AI Chatbot"];
+  const cardType = [
+    <img
+      src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"
+      alt="TypeScript Badge"
+    />,
+    <img
+      src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
+      alt="React Badge"
+    />,
+    <img
+      src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"
+      alt="Tailwind CSS Badge"
+    />,
+    <img
+      src="https://img.shields.io/badge/JavaScript-FFFF00?style=for-the-badge&logo=javascript&logoColor=black"
+      alt="JavaScript Badge"
+    />,
+  ];
 
   return (
     <Content>
@@ -70,6 +88,7 @@ const App: React.FC = () => {
                 <div className="overlay">
                   <div className="number-badge">{`0${index + 1}`}</div>
                   <div className="carousel-title">{projects[index]}</div>
+                  <div className="card-Type">{cardType}</div>
                 </div>
               </div>
             </div>
