@@ -33,8 +33,29 @@ const App: React.FC = () => {
       src="https://img.shields.io/badge/JavaScript-FFFF00?style=for-the-badge&logo=javascript&logoColor=black"
       alt="JavaScript Badge"
     />,
+    <img
+      src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"
+      alt="Next.js Badge"
+    />,
+    <img
+      src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"
+      alt="Node.js Badge"
+    />,
   ];
 
+  const slides = [
+    [0, 1, 4],
+    [1, 3, 5],
+    [1, 3, 5],
+  ];
+
+  const displaySlide = (slideIndex) => {
+    return slides[slideIndex].map((index) => cardType[index]);
+  };
+
+  const cardType_1 = displaySlide(0);
+  const cardType_2 = displaySlide(1);
+  const cardType_3 = displaySlide(2);
   return (
     <Content>
       <div>
@@ -61,7 +82,11 @@ const App: React.FC = () => {
                 <div className="overlay">
                   <div className="number-badge">{`0${index + 1}`}</div>
                   <div className="carousel-title">{projects[index]}</div>
-                  <div className="card-Type">{cardType}</div>
+                  <div className="card-Type">
+                    {cardType_1.map((badge, index) => (
+                      <div key={index}>{badge}</div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
