@@ -1,6 +1,6 @@
 import { Content } from "antd/es/layout/layout";
 import React from "react";
-import App from "../TS/Carousel.tsx";
+import App from "../Components/Carousel.tsx";
 
 function Project() {
   return (
