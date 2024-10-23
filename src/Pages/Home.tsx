@@ -12,13 +12,19 @@ import Project from "./Project.tsx";
 
 function Home() {
   const [theme, setTheme] = useState("light");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleTheme = (checked) => {
     setTheme(checked ? "dark" : "light");
     document.body.className = checked ? "dark" : "light"; // Apply global theme class
   };
 
-  const menuOpen = () => {};
+  const menuOpen = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+  const menuClose = () => {
+    setIsMenuOpen(false); // Use the same state variable to close the menu
+  };
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
@@ -48,37 +54,72 @@ function Home() {
           </div>
         </div>
       </Header>
+      {/* MENU BUTTON HERE */}
       <Content className="Content">
-        <button
-          className="Menu-animated"
-          onClick={menuOpen}
-          style={{
-            background: "transparent",
-            color: "#fff",
-            border: "none",
-          }}
-        >
-          <img
-            src="/menu.png"
-            alt="Menu"
+        <div>
+          <button
+            className="Menu-animated"
+            onClick={menuOpen}
             style={{
-              width: 40,
-              height: 40,
-              position: "relative",
-              bottom: "50px",
-              left: "55px",
-              transform: "rotate(-90deg)",
+              background: "transparent",
+              color: "#fff",
+              border: "none",
             }}
-          />
-          MENU
-        </button>
+          >
+            <img
+              src="/menu.png"
+              alt="Menu"
+              style={{
+                width: 40,
+                height: 40,
+                position: "relative",
+                bottom: "50px",
+                left: "55px",
+                transform: "rotate(-90deg)",
+              }}
+            />
+            MENU
+          </button>
+
+          {/* Sidebar */}
+          <div className={`sidebar ${isMenuOpen ? "active" : ""}`}>
+            <button
+              onClick={menuClose}
+              style={{
+                background: "transparent",
+                border: "none",
+                width: "auto",
+                transition: "opacity 0.8s ease", // Animation for invisibility
+              }}
+            >
+              <img
+                src="/close.png"
+                style={{ alignItems: "center", justifyContent: "center" }}
+              />
+            </button>
+            <ul>
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Services</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <Content
           style={{
             paddingLeft: "60px",
             position: "relative",
           }}
         >
-          <Content>
+          <Content className="animated-text">
             <div className="Hello-1">HE</div>
             <div className="Hello-2">LLO</div>
             <div className="Hello-dot">.</div>
