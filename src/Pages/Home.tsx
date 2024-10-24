@@ -83,34 +83,51 @@ function Home() {
 
           {/* Sidebar */}
           <div className={`sidebar ${isMenuOpen ? "active" : ""}`}>
-            <button
-              onClick={menuClose}
-              style={{
-                background: "transparent",
-                border: "none",
-                width: "auto",
-                transition: "opacity 0.8s ease", // Animation for invisibility
-              }}
-            >
+            <button onClick={menuClose} className="close-btn">
               <img
                 src="/close.png"
                 style={{ alignItems: "center", justifyContent: "center" }}
               />
             </button>
-            <ul>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">About</a>
-              </li>
-              <li>
-                <a href="#">Services</a>
-              </li>
-              <li>
-                <a href="#">Contact</a>
-              </li>
-            </ul>
+            <div className="Menu-content">
+              <div style={{ fontSize: "75px", fontWeight: "700" }}>MENU</div>
+              <div
+                style={{
+                  fontSize: "45px",
+                  fontWeight: "700",
+                  paddingTop: "25px",
+                  paddingBottom: "25px",
+                }}
+              >
+                <div>HOME</div>
+                <div>ABOUT</div>
+                <div>PROJECTS</div>
+              </div>
+              <div
+                style={{
+                  fontSize: "25px",
+                  fontWeight: "700",
+                  paddingBottom: "25px",
+                }}
+              >
+                CONTACT
+              </div>
+              <div style={{ fontSize: "20px" }}>Muhammad Hassan Kashif</div>
+              <div style={{ fontSize: "20px" }}>
+                Hassan.kashif.pro@Gmail.com
+              </div>{" "}
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/HassanKashif-pro"
+                className="Social-links-menu"
+              >
+                <GithubOutlined className="github-social" style={{}} />
+                <Link href="/pathwayhereforLinkedIn">
+                  <LinkedinOutlined className="linkedIn-social" style={{}} />
+                </Link>
+              </Link>
+            </div>
           </div>
         </div>
         <Content
@@ -131,12 +148,14 @@ function Home() {
           </Content>
           <Content className="Social-links">
             <Link
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://github.com/HassanKashif-pro"
               className="Social-links"
             >
-              <GithubOutlined className="github-social" />
+              <GithubOutlined />
               <Link href="/pathwayhereforLinkedIn">
-                <LinkedinOutlined className="linkedIn-social" />
+                <LinkedinOutlined />
               </Link>
             </Link>
           </Content>

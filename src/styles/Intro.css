@@ -7,16 +7,17 @@ body.light {
   background-color: #fff;
   color: #000;
 }
-
 /* Dark mode */
 body.dark {
   background: rgb(39, 39, 42);
   color: #fff;
 }
-
 /* Additional styling for the Ant Layout components in dark mode */
 body.dark .ant-layout-header {
   background-color: rgb(39, 39, 42);
+}
+body.light .ant-layout-header {
+  background-color: rgb(255, 255, 255);
 }
 
 body.dark .ant-layout-content {
@@ -113,6 +114,8 @@ body.light .anticon {
   font-family: "Montserrat", sans-serif;
   font-size: 150px;
   font-weight: 800;
+  animation: slideToTop 0.5s ease-out forwards;
+  position: relative;
 }
 .Hello-2 {
   display: flex;
@@ -127,6 +130,8 @@ body.light .anticon {
   font-family: "Montserrat", sans-serif;
   font-size: 150px;
   font-weight: 800;
+  animation: slideToTop 0.5s ease-out forwards;
+  position: relative;
 }
 .Hello-dot {
   display: inline;
@@ -159,6 +164,24 @@ body.light .anticon {
   transition: 0.4s ease;
 }
 .Social-links .anticon:hover {
+  transition: 0.4s ease;
+  transform: scale(1.2); /* Increase the size by 20% on hover */
+}
+.sidebar {
+  position: relative; /* Ensure this is the parent element */
+}
+.Social-links-menu .anticon {
+  color: aliceblue;
+  margin-left: 20px;
+  font-size: 60px; /* Set the icon size */
+  width: 40px; /* Adjust the width to match the size */
+  height: 40px; /* Adjust the height to match the size */
+  margin-top: 20px;
+  border-radius: 30px;
+  background-color: transparent;
+  transition: 0.4s ease;
+}
+.Social-links-menu .anticon:hover {
   transition: 0.4s ease;
   transform: scale(1.2); /* Increase the size by 20% on hover */
 }
@@ -231,4 +254,65 @@ body.light .anticon {
 /* Adjust position of handle when checked */
 .custom-switch.ant-switch-checked .ant-switch-handle {
   transform: translateX(-4px); /* Move handle to the right */
+}
+/* Menu.css */
+.sidebar {
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: -40%; /* Initially hidden */
+  width: 40%;
+  height: 100%;
+  color: white;
+  transition: left 1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 64px;
+  background: rgb(39, 39, 42);
+  height: calc(100vh - 2 * 56px);
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  font-weight: 700;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* When sidebar is active, it slides in */
+.sidebar.active {
+  left: 0;
+}
+.close-btn {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  padding: 0;
+  transition: transform 0.5s ease-in-out; /* Smooth rotation */
+}
+.Menu-content {
+  position: absolute;
+  justify-content: space-evenly;
+  margin-left: 230px;
+  top: 5%;
+}
+.close-btn:hover {
+  transform: rotate(180deg); /* Rotate 360 degrees clockwise */
+}
+
+.sidebar.active .Intro-section {
+  margin-left: 400px;
 }
