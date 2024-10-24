@@ -3,7 +3,7 @@ import "../styles/Intro.css";
 import "../styles/About.css";
 import "../styles/Projects.css";
 import { Button, Image, Layout, Switch } from "antd";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "antd/es/typography/Link";
 import GithubOutlined from "@ant-design/icons/lib/icons/GithubOutlined";
 import { LinkedinOutlined } from "@ant-design/icons";
@@ -13,7 +13,45 @@ import Project from "./Project.tsx";
 function Home() {
   const [theme, setTheme] = useState("light");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
+  useEffect(() => {
+    const sections = document.querySelectorAll("#home, #about, #project"); // Get all section elements
+    const options = {
+      root: null, // Observe relative to the viewport
+      threshold: 0.6, // 60% of the section is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id); // Set the active section
+        }
+      });
+    }, options);
+
+    sections.forEach((section) => {
+      observer.observe(section); // Start observing each section
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        observer.unobserve(section); // Clean up observers on unmount
+      });
+    };
+  }, []);
+  const getMenuHeadingColor = () => {
+    switch (activeSection) {
+      case "home":
+        return "#f87171";
+      case "about":
+        return "yellow";
+      case "projects":
+        return "blue";
+      default:
+        return "black";
+    }
+  };
   const toggleTheme = (checked) => {
     setTheme(checked ? "dark" : "light");
     document.body.className = checked ? "dark" : "light"; // Apply global theme class
@@ -90,7 +128,17 @@ function Home() {
               />
             </button>
             <div className="Menu-content">
-              <div style={{ fontSize: "75px", fontWeight: "700" }}>MENU</div>
+              <div style={{ fontSize: "75px", fontWeight: "700" }}>
+                <div
+                  style={{
+                    color: getMenuHeadingColor(),
+                    display: "inline-flex",
+                  }}
+                >
+                  M
+                </div>
+                ENU
+              </div>
               <div
                 style={{
                   fontSize: "45px",
@@ -135,6 +183,7 @@ function Home() {
             paddingLeft: "60px",
             position: "relative",
           }}
+          id="home"
         >
           <Content className="animated-text">
             <div className="Hello-1">HE</div>

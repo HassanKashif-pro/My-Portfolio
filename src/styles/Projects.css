@@ -1,13 +1,15 @@
 .Project-section {
   position: absolute;
-  height: 85vh; /* Full screen height for each section */
+  height: 86vh; /* Full screen height for each section */
   display: flex;
-  width: 20%; /* Adjust the width if necessary */
-  right: 0;
+  width: 15%; /* Adjust the width if necessary */
+  right: 60px; /* Set to 60px to create space from the right edge */
+  padding-right: 0;
   justify-content: flex-start; /* Aligns items to the left */
   align-items: center;
   scroll-snap-align: center;
 }
+
 .Content-project {
   scroll-snap-type: y mandatory; /* Vertical snapping */
   overflow-y: scroll;
@@ -23,7 +25,7 @@
 .Project-dot {
   position: absolute;
   bottom: 20%; /* Adjust for spacing at the bottom */
-  right: 20rem; /* Align to the left */
+  right: 16.5rem; /* Align to the left */
   font-size: 150px; /* Size of the dot */
   color: #0ea5e9; /* Same blue color as the background */
 }
@@ -40,12 +42,12 @@
   color: white; /* White text */
 }
 .Project-1 {
-  right: 5rem;
+  right: 2rem;
   bottom: 21rem;
 }
 .Project-2 {
   bottom: 17rem;
-  right: 7rem;
+  right: 4rem;
 }
 .carouselBox {
   justify-content: center;
@@ -53,7 +55,7 @@
   width: 50%;
   height: 100%;
   border-color: #0ea5e9;
-  top: 35rem;
+  top: 29rem;
   left: 13rem;
   border: 3px solid #00aaff;
   border-radius: 10px;
@@ -146,7 +148,7 @@
   position: absolute;
   display: inline;
   width: 20%;
-  padding-top: 10rem;
+  padding-top: 30rem;
   align-items: center;
   justify-content: center;
   left: 35%;
