@@ -2,6 +2,13 @@ import { Content } from "antd/es/layout/layout";
 import React from "react";
 import App from "../Components/Carousel.tsx";
 
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // For smooth scrolling
+  });
+};
+
 function Project() {
   return (
     <Content>
@@ -26,16 +33,29 @@ function Project() {
                   .
                 </div>
               </Content>
-              <div
+              <button
                 style={{
                   position: "relative",
                   right: "12rem",
                   top: "12rem",
                   transform: "rotate(180deg)",
+                  border: "none",
+                  fontSize: "20px",
+                  fontWeight: "700",
+                  backgroundColor: "transparent",
                 }}
+                onClick={scrollToTop}
               >
+                <div
+                  style={{
+                    rotate: "180deg",
+                    color: "rgb(39, 39, 42)",
+                  }}
+                >
+                  TOP
+                </div>
                 <img src="/arrow.png" />
-              </div>
+              </button>
             </Content>
           </Content>
         </Content>
