@@ -52,6 +52,18 @@ function Home() {
         return "black";
     }
   };
+  const homeClick = () => {
+    document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const aboutClick = () => {
+    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const projectsClick = () => {
+    document.getElementById("project")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const toggleTheme = (checked) => {
     setTheme(checked ? "dark" : "light");
     document.body.className = checked ? "dark" : "light"; // Apply global theme class
@@ -142,21 +154,21 @@ function Home() {
               <nav style={{ fontSize: "0", fontWeight: "700" }}>
                 <ul className="menu-ul">
                   <li>
-                    <button className="home-nav">
+                    <button className="home-nav" onClick={homeClick}>
                       <div className="nav-item">
                         HOME<span className="nav-dot">.</span>
                       </div>
                     </button>
                   </li>
                   <li>
-                    <button className="about-nav">
+                    <button className="about-nav" onClick={aboutClick}>
                       <div className="nav-item">
                         ABOUT<span className="nav-dot">.</span>
                       </div>
                     </button>
                   </li>
                   <li>
-                    <button className="projects-nav">
+                    <button className="projects-nav" onClick={projectsClick}>
                       <div className="nav-item">
                         PROJECTS<span className="nav-dot">.</span>
                       </div>
