@@ -14,7 +14,7 @@ function Home() {
   const [theme, setTheme] = useState("light");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-
+  const [isChecked, setIsChecked] = useState(true);
   useEffect(() => {
     const sections = document.querySelectorAll("#home, #about, #project"); // Get all section elements
     const options = {
@@ -63,10 +63,14 @@ function Home() {
   const projectsClick = () => {
     document.getElementById("project")?.scrollIntoView({ behavior: "smooth" });
   };
-
+  useEffect(() => {
+    document.body.className = "dark";
+  }, []);
   const toggleTheme = (checked) => {
-    setTheme(checked ? "dark" : "light");
-    document.body.className = checked ? "dark" : "light"; // Apply global theme class
+    const newTheme = checked ? "dark" : "light";
+    setTheme(newTheme);
+    setIsChecked(checked);
+    document.body.className = newTheme; // Apply global theme class based on toggle
   };
 
   const menuOpen = () => {
@@ -98,7 +102,7 @@ function Home() {
             <Switch
               onChange={toggleTheme}
               className="custom-switch"
-              checked={theme === "dark"}
+              checked={isChecked} // Bind to the `isChecked` state
               style={{ zIndex: 2 }} // Ensure the switch is on top
             />
           </div>

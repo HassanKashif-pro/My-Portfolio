@@ -35,7 +35,7 @@ function Project() {
         <button
           style={{
             position: "relative",
-            right: "12rem",
+            right: "9rem",
             top: "12rem",
             transform: "rotate(180deg)",
             border: "none",
