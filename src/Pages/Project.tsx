@@ -23,7 +23,7 @@ function Project() {
       <Content
         className="Project-section"
         style={{ background: "#0EA5E9" }}
-        id="projects"
+        id="project"
       >
         <Content style={{ backgroundColor: "" }}>
           <div className="Project-1">PRO</div>

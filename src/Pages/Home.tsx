@@ -46,8 +46,8 @@ function Home() {
         return "#f87171";
       case "about":
         return "yellow";
-      case "projects":
-        return "blue";
+      case "project":
+        return "#0ea5e9";
       default:
         return "black";
     }
@@ -139,26 +139,47 @@ function Home() {
                 </div>
                 ENU
               </div>
+              <nav style={{ fontSize: "0", fontWeight: "700" }}>
+                <ul className="menu-ul">
+                  <li>
+                    <button className="home-nav">
+                      <div className="nav-item">
+                        HOME<span className="nav-dot">.</span>
+                      </div>
+                    </button>
+                  </li>
+                  <li>
+                    <button className="about-nav">
+                      <div className="nav-item">
+                        ABOUT<span className="nav-dot">.</span>
+                      </div>
+                    </button>
+                  </li>
+                  <li>
+                    <button className="projects-nav">
+                      <div className="nav-item">
+                        PROJECTS<span className="nav-dot">.</span>
+                      </div>
+                    </button>
+                  </li>
+                </ul>
+              </nav>
               <div
                 style={{
-                  fontSize: "45px",
-                  fontWeight: "700",
-                  paddingTop: "25px",
+                  fontSize: "30px",
+                  fontWeight: "800",
                   paddingBottom: "25px",
                 }}
               >
-                <div>HOME</div>
-                <div>ABOUT</div>
-                <div>PROJECTS</div>
-              </div>
-              <div
-                style={{
-                  fontSize: "25px",
-                  fontWeight: "700",
-                  paddingBottom: "25px",
-                }}
-              >
-                CONTACT
+                <div
+                  style={{
+                    color: getMenuHeadingColor(),
+                    display: "inline-flex",
+                  }}
+                >
+                  C
+                </div>
+                ONTACT
               </div>
               <div style={{ fontSize: "20px" }}>Muhammad Hassan Kashif</div>
               <div style={{ fontSize: "20px" }}>
