@@ -1,6 +1,5 @@
 import { Content } from "antd/es/layout/layout";
 import React, { useState } from "react";
-
 function About() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -15,14 +14,18 @@ function About() {
   return (
     <Content
       id="about"
-      className="main-section"
+      className={"main-section"}
       style={{
         paddingTop: "90px",
         paddingLeft: "60px",
         position: "relative",
+        transition: "opacity 0.5s ease",
       }}
     >
-      <Content className="About-section" style={{ background: "#FACC15" }}>
+      <Content
+        className={`About-section ${isOpen ? "low-opacity" : ""}`}
+        style={{ background: "#FACC15" }}
+      >
         <Content>
           <div className="Hello-1" style={{ top: "35%", left: "20%" }}>
             AB
@@ -97,7 +100,10 @@ function About() {
         </button>
 
         {/* Sidebar for more information */}
-        <div className={`More-section ${isOpen ? "active" : ""}`}>
+        <div
+          className={`More-section ${isOpen ? "active" : ""}`}
+          style={{ opacity: isOpen ? 1 : 1 }}
+        >
           {/* Close button, only visible when the menu is open */}
           {isOpen && (
             <button
@@ -125,10 +131,77 @@ function About() {
               BACK
             </button>
           )}
+          <div className="info-block">
+            <div style={{ display: "inline-flex", fontSize: "35px" }}>
+              HELLOW<span style={{ color: "#FACC15" }}>,</span>WORLD
+              <span style={{ color: "#FACC15" }}>!</span>
+            </div>
+            <p className="description-block">
+              As an enthusiastic web developer with a passion for coding and
+              problem-solving, I have honed my skills through rigorous online
+              courses such as Harvard's CS50x and The Odin Project. Though I am
+              at the beginning of my professional journey, these comprehensive
+              programs have equipped me with a solid foundation in HTML, CSS,
+              JavaScript, and various modern web development frameworks. My
+              portfolio reflects a commitment to continuous learning and
+              showcases the practical projects I have completed, highlighting my
+              ability to bring creative, interactive and responsive web
+              solutions to life!
+              <br />
+              <br />
+              Here are the tech stacks I have used in various projects:
+              <br />
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap" /* Wrap to next line if needed */,
+                  gap: "10px",
+                  paddingTop: "20px",
+                }}
+              >
+                <img
+                  src={process.env.REACT_APP_HTML5_BADGE}
+                  alt="HTML5 Badge"
+                />
+                <img src={process.env.REACT_APP_CSS3_BADGE} alt="CSS3 Badge" />
+                <img
+                  src={process.env.REACT_APP_JAVASCRIPT_BADGE}
+                  alt="JavaScript Badge"
+                />
+                <img
+                  src={process.env.REACT_APP_TYPESCRIPT_BADGE}
+                  alt="TypeScript Badge"
+                />
+                <img src={process.env.REACT_APP_C_BADGE} alt="C Badge" />
+                <img
+                  src={process.env.REACT_APP_PYTHON_BADGE}
+                  alt="Python Badge"
+                />
+                <img
+                  src={process.env.REACT_APP_REACT_BADGE}
+                  alt="React Badge"
+                />
 
-          <div style={{ display: "inline-flex" }}>
-            HELLOW<span style={{ color: "#FACC15" }}>,</span>WORLD
-            <span style={{ color: "#FACC15" }}>!</span>
+                <img
+                  src={process.env.REACT_APP_TAILWIND_BADGE}
+                  alt="Tailwind CSS Badge"
+                />
+                <img
+                  src={process.env.REACT_APP_BOOTSTRAP_BADGE}
+                  alt="Bootstrap Badge"
+                />
+
+                <img
+                  src={process.env.REACT_APP_PRETTIER_BADGE}
+                  alt="Prettier Badge"
+                />
+                <img
+                  src={process.env.REACT_APP_VSCODE_BADGE}
+                  alt="Visual Studio Code Badge"
+                />
+                <img src={process.env.REACT_APP_GIT_BADGE} alt="Git Badge" />
+              </div>
+            </p>
           </div>
         </div>
       </div>
