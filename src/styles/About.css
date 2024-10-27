@@ -93,4 +93,23 @@
   top: 15rem;
 }
 .More-section {
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: -100%; /* Initially hidden off-screen to the right */
+  width: 60%; /* Adjust width as needed */
+  height: 100%;
+  color: white;
+  transition: right 0.5s ease; /* Transition to animate the slide */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 64px;
+  background: rgb(39, 39, 42);
+  padding: 20px;
+}
+
+.More-section.active {
+  right: 0; /* Slide-in effect by setting right to 0 */
 }
