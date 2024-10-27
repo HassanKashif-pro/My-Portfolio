@@ -6,15 +6,20 @@
   overflow-y: hidden;
   scroll-snap-align: start;
 }
+
 .About-section {
   height: 80vh;
   display: inline-block;
+
   width: 30%;
   justify-content: center;
   align-items: center;
   scroll-snap-align: start;
 }
-
+.About-section.low-opacity {
+  opacity: 0.3; /* Adjust as needed */
+  transition: opacity 0.5s ease;
+}
 .Hello-1 {
   display: flex;
   top: 20%;
@@ -96,6 +101,7 @@
   position: fixed;
   z-index: 2000;
   top: 0;
+  opacity: 1;
   right: -100%; /* Initially hidden off-screen to the right */
   width: 63%; /* Adjust width as needed */
   height: 100%;
@@ -122,8 +128,9 @@
 .more-close-btn {
   font-weight: 700;
   top: 50%;
-  left: 0%;
+  right: 100%;
   display: inline-block;
+  z-index: 2000;
   position: fixed;
   font-size: x-large;
   transform: rotate(90deg); /* Rotate to make it read vertically on the left */
@@ -144,4 +151,16 @@
 .more-close-btn:hover::after {
   transform: scaleX(0.5);
   transform-origin: top right;
+}
+.description-block {
+  padding: 30px;
+  font-size: 20px;
+  font-weight: 350;
+  left: 0;
+  text-align: justify;
+  text-wrap: pretty;
+}
+.info-block {
+  margin-left: 20px;
+  bottom: 120%;
 }
