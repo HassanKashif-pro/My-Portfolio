@@ -98,14 +98,38 @@ function About() {
 
         {/* Sidebar for more information */}
         <div className={`More-section ${isOpen ? "active" : ""}`}>
-          <button
-            onClick={moreClose}
-            style={{ position: "absolute", top: 20, right: 20 }}
-          >
-            Close
-          </button>
-          <p>Hey, this is more information about me!</p>
-          {/* Additional content here */}
+          {/* Close button, only visible when the menu is open */}
+          {isOpen && (
+            <button
+              className="more-close-btn"
+              onClick={moreClose}
+              style={{
+                background: "transparent",
+                color: "#fff",
+                border: "none",
+                position: "absolute",
+              }}
+            >
+              <img
+                src="/triangle.png"
+                alt="More"
+                style={{
+                  width: 50,
+                  height: 50,
+                  position: "relative",
+                  top: "55px",
+                  left: "60px",
+                  transform: "rotate(360deg)",
+                }}
+              />
+              BACK
+            </button>
+          )}
+
+          <div style={{ display: "inline-flex" }}>
+            HELLOW<span style={{ color: "#FACC15" }}>,</span>WORLD
+            <span style={{ color: "#FACC15" }}>!</span>
+          </div>
         </div>
       </div>
     </Content>
