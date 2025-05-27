@@ -57,8 +57,8 @@ function About() {
         <div
           style={{ fontSize: "20px", fontWeight: "500", letterSpacing: "3px" }}
         >
-          Frontend <span style={{ color: "#FACC15" }}>|</span> Responsive{" "}
-          <span style={{ color: "#FACC15" }}>|</span> Interactive Design
+          Fullstack <span style={{ color: "#FACC15" }}>|</span> Developer{" "}
+          <span style={{ color: "#FACC15" }}>|</span> Web App
         </div>
         <div
           style={{
@@ -69,7 +69,7 @@ function About() {
           }}
         >
           HTML <span style={{ color: "#FACC15" }}>|</span> CSS{" "}
-          <span style={{ color: "#FACC15" }}>|</span> JAVA SCRIPT
+          <span style={{ color: "#FACC15" }}>|</span> TYPE SCRIPT
         </div>
       </Content>
 
@@ -137,16 +137,21 @@ function About() {
               <span style={{ color: "#FACC15" }}>!</span>
             </div>
             <p className="description-block">
-              As an enthusiastic web developer with a passion for coding and
-              problem-solving, I have honed my skills through rigorous online
-              courses such as Harvard's CS50x and The Odin Project. Though I am
-              at the beginning of my professional journey, these comprehensive
-              programs have equipped me with a solid foundation in HTML, CSS,
-              JavaScript, and various modern web development frameworks. My
-              portfolio reflects a commitment to continuous learning and
-              showcases the practical projects I have completed, highlighting my
-              ability to bring creative, interactive and responsive web
-              solutions to life!
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "10px" }}>
+              <div style={{ background: "#fffbe6", borderRadius: "14px", padding: "28px 32px", minWidth: "260px", boxShadow: "0 2px 12px #facc1533", textAlign: "center" }}>
+                <div style={{ fontSize: "38px", marginBottom: "10px" }}>🏆</div>
+                <div style={{ fontSize: "22px", fontWeight: 700, color: "#FACC15", marginBottom: "8px" }}>Fullstack Developer</div>
+                <div style={{ fontSize: "15px", fontWeight: 500, color: "#222", marginBottom: "16px" }}>
+                  Ship fast. Ship clean. UI/UX that users love.<br />
+                  Under 3 years of experience and 10+ "successful" projects
+                </div>
+                <div style={{ fontSize: "14px", color: "#444", marginBottom: "4px" }}>
+                Why hire me? Because your clients deserves better than a Vibecoded Slop.<br />
+🧠 I write code that works harder than most interns.<br />
+📈 I turn bugs into features and clicks into paying customers.
+                </div>
+              </div>
+            </div>
               <br />
               <br />
               Here are the tech stacks I have used in various projects:

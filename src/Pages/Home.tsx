@@ -208,7 +208,7 @@ function Home() {
                 className="Social-links-menu"
               >
                 <GithubOutlined className="github-social" style={{}} />
-                <Link href="/pathwayhereforLinkedIn">
+                <Link href="/https://www.linkedin.com/in/hassan-kashif-072628334/">
                   <LinkedinOutlined className="linkedIn-social" style={{}} />
                 </Link>
               </Link>
@@ -240,7 +240,7 @@ function Home() {
               className="Social-links"
             >
               <GithubOutlined />
-              <Link href="/pathwayhereforLinkedIn">
+              <Link href="/https://www.linkedin.com/in/hassan-kashif-072628334">
                 <LinkedinOutlined />
               </Link>
             </Link>
