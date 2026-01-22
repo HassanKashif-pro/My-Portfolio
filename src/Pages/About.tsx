@@ -41,7 +41,7 @@ function About() {
           </div>
         </Content>
         <div style={{ top: "88%", left: "85%", position: "relative" }}>
-          <img src="/arrow.png" alt="Arrow" />
+          <img src={process.env.PUBLIC_URL + "/arrow.png"} alt="Arrow" />
         </div>
       </Content>
 
@@ -85,7 +85,7 @@ function About() {
           }}
         >
           <img
-            src="/triangle.png"
+            src={process.env.PUBLIC_URL + "/triangle.png"}
             alt="More"
             style={{
               width: 40,
@@ -117,7 +117,7 @@ function About() {
               }}
             >
               <img
-                src="/triangle.png"
+                src={process.env.PUBLIC_URL + "/triangle.png"}
                 alt="More"
                 style={{
                   width: 50,

@@ -66,7 +66,7 @@ function Home() {
   useEffect(() => {
     document.body.className = "dark";
   }, []);
-  const toggleTheme = (checked) => {
+  const toggleTheme = (checked: boolean) => {
     const newTheme = checked ? "dark" : "light";
     setTheme(newTheme);
     setIsChecked(checked);
@@ -121,8 +121,8 @@ function Home() {
             }}
           >
             <img
-              src="/menu.png"
-              alt="Menu"
+              src={process.env.PUBLIC_URL + "/menu.png"}
+              alt="Menu icon"
               style={{
                 width: 40,
                 height: 40,
@@ -139,7 +139,8 @@ function Home() {
           <div className={`sidebar ${isMenuOpen ? "active" : ""}`}>
             <button onClick={menuClose} className="close-btn">
               <img
-                src="/close.png"
+                src={process.env.PUBLIC_URL + "/close.png"}
+                alt="Close menu"
                 style={{ alignItems: "center", justifyContent: "center" }}
               />
             </button>
@@ -208,7 +209,7 @@ function Home() {
                 className="Social-links-menu"
               >
                 <GithubOutlined className="github-social" style={{}} />
-                <Link href="/https://www.linkedin.com/in/hassan-kashif-072628334/">
+                <Link href="https://www.linkedin.com/in/hassan-kashif-072628334/">
                   <LinkedinOutlined className="linkedIn-social" style={{}} />
                 </Link>
               </Link>
@@ -229,7 +230,7 @@ function Home() {
           </Content>
           <Content className="Intro-section" style={{ background: "#f87171" }}>
             <div style={{ top: "50%", position: "relative", left: "45%" }}>
-              <img src="/arrow.png" />
+              <img src={process.env.PUBLIC_URL + "/arrow.png"} alt="Arrow" />
             </div>
           </Content>
           <Content className="Social-links">
@@ -240,7 +241,7 @@ function Home() {
               className="Social-links"
             >
               <GithubOutlined />
-              <Link href="/https://www.linkedin.com/in/hassan-kashif-072628334">
+              <Link href="https://www.linkedin.com/in/hassan-kashif-072628334">
                 <LinkedinOutlined />
               </Link>
             </Link>

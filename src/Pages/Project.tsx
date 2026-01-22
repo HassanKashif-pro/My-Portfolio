@@ -53,7 +53,7 @@ function Project() {
           >
             TOP
           </div>
-          <img src="/arrow.png" />
+          <img src={process.env.PUBLIC_URL + "/arrow.png"} alt="Arrow" />
         </button>
       </Content>
     </Content>

@@ -49,7 +49,7 @@ const App: React.FC = () => {
     [1, 3, 5],
   ];
 
-  const displaySlide = (slideIndex) => {
+  const displaySlide = (slideIndex: number) => {
     return slides[slideIndex].map((index) => cardType[index]);
   };
 

@@ -1,11 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App.tsx"; // Ensure the path to App is correct
-import "./index.css"; // Ensure the path to the CSS file is correct
+import ReactDOM from "react-dom/client";
+import App from "./App.tsx";
+import "./index.css";
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
