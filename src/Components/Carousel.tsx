@@ -14,7 +14,11 @@ const contentStyle: React.CSSProperties = {
 };
 
 const App: React.FC = () => {
-  const images = ["/banking.jpg", "/todo.jpg", "/AiChatbot.jpg"];
+  const images = [
+    process.env.PUBLIC_URL + "/banking.jpg",
+    process.env.PUBLIC_URL + "/todo.jpg",
+    process.env.PUBLIC_URL + "/AiChatbot.jpg"
+  ];
   const projects = ["Banking App", "Todo App", "AI Chatbot"];
   const cardType = [
     <img
